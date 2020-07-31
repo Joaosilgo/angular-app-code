@@ -1,0 +1,47 @@
+<!-- <p>objecto works!</p> 
+
+
+<h2>{{objecto.name | uppercase}} DETAILS</h2>
+<div><span>id: </span>{{objecto.id}}</div>
+<div><span>name: </span>{{objecto.name}}</div>
+-->
+
+
+<!-- <h2>{{objecto.name | uppercase}} Details</h2>
+<div><span>id: </span>{{objecto.id}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="objecto.name" placeholder="name"/>
+  </label>
+</div>
+-->
+
+
+<h2>My Objects</h2>
+<ul class="objecto">
+  <li *ngFor="let objecto of objectos"
+    [class.selected]="objecto === selectedObjecto"
+    (click)="onSelect(objecto)">
+    <span class="badge">{{objecto.id}}</span> {{objecto.name}}
+  </li>
+</ul>
+
+
+
+
+<app-objecto-detail [objecto]="selectedObjecto"></app-objecto-detail>
+
+<!--
+<div *ngIf="selectedObjecto">
+
+  <h2>{{selectedObjectoname | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedObjecto.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedObjecto.name" placeholder="name"/>
+    </label>
+  </div>
+
+</div>
+
+-->

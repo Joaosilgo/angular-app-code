@@ -1,0 +1,13 @@
+
+
+<div *ngIf="objecto">
+    <p>objecto-detail works!</p>
+    <h2>{{objecto.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{objecto.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="objecto.name" placeholder="name"/>
+      </label>
+    </div>
+  
+  </div>
